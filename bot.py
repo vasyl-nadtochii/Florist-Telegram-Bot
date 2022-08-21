@@ -1,11 +1,13 @@
 from email.message import Message
-import logging
+
 from aiogram import Bot, Dispatcher, executor, types
 from aiogram.dispatcher.filters.state import State, StatesGroup
 from aiogram.contrib.fsm_storage.memory import MemoryStorage
+from aiogram.types import ReplyKeyboardMarkup, ReplyKeyboardRemove, KeyboardButton
 
 import Config.config as config
 import Config.debug_helper as helper
+import logging
 
 from Florist.Services.Localizables.localizables import LocalizableManager
 
@@ -18,7 +20,22 @@ localized_manager = LocalizableManager()
 
 @dp.message_handler(commands = ['start'])
 async def on_start(message: Message):
-    await message.answer(localized_manager.get_localized_string(key = "intro_message"))
+    sign_in_btn = KeyboardButton("Sign in")
+    sign_up_btn = KeyboardButton("Sign up")
+
+    keyboard = ReplyKeyboardMarkup(
+        resize_keyboard = True,
+         one_time_keyboard = True
+    ).add(
+        sign_in_btn
+    ).add(
+        sign_up_btn
+    )
+
+    await message.reply(
+        localized_manager.get_localized_string(key = "intro_message"),
+         reply_markup = keyboard
+    )
 
 # TODO: temporary - remove that later
 @dp.message_handler()

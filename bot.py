@@ -7,7 +7,7 @@ from aiogram.contrib.fsm_storage.memory import MemoryStorage
 import Config.config as config
 import Config.debug_helper as helper
 
-from Services.Localizables.localizables import LocalizableManager
+from Florist.Services.Localizables.localizables import LocalizableManager
 
 logging.basicConfig (level = logging.INFO)
 

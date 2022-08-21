@@ -1,6 +1,14 @@
 import os
 from Config.debug_helper import Logger
 
+def __clear_console():
+    if os.name == 'nt': # for windows
+      _ = os.system('cls')
+    else: # for mac and linux
+        os.system('clear')
+
+__clear_console()
+
 def __start():
     choice = None
 
@@ -11,10 +19,12 @@ def __start():
     try:
         choice = int(input("Your choice: "))
     except:
+        __clear_console()
         Logger.log("Wrong input type, try again", Logger.MessageType.error)
         __start()
         return
 
+    __clear_console()
     if choice == 1:
         os.system('python bot.py')
     elif choice == 2:

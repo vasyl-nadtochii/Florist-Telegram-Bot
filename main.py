@@ -26,9 +26,9 @@ def __start():
 
     __clear_console()
     if choice == 1:
-        os.system('python bot.py')
+        os.system('py bot.py')
     elif choice == 2:
-        os.system('python tests.py')
+        os.system('py tests.py')
     else:
         Logger.log("Wrong option, try again", Logger.MessageType.error)
         __start()

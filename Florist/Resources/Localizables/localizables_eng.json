@@ -1,6 +1,8 @@
 {
   "test_key": "Test Value",
-  "intro_message": "Hello there\n\nYou've just launched Florist telegram bot. Welcome!\n\n Please choose one option below⬇️",
-  "sign_in_btn_text": "Sign in➡️",
-  "sign_up_btn_text": "Sign up➕"
+  "intro_message": "Hello there 🤗\n\nYou've just launched Florist telegram bot. Welcome 🎉\n\nPlease choose one option below ⬇️",
+  "sign_in_btn_text": "Sign in ➡️",
+  "sign_up_btn_text": "Sign up ➕",
+  "sign_up_started": "You've started Sign Up ℹ️",
+  "sign_up_request_phone_message": "At first, please provide your phone number ☎️\n\nYou can tap button below to send phone number of your telegram account ℹ️"
 }

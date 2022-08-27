@@ -6,7 +6,6 @@ from aiogram.contrib.fsm_storage.memory import MemoryStorage
 
 import Config.config as config
 import Config.debug_helper as helper
-from Config.debug_helper import Logger
 
 from Florist.Services.Localizables.localizables import LocalizableManager
 from Florist.Resources.Keyboards.keyboards import KeyboardManager
@@ -15,7 +14,7 @@ from Florist.StatesGroups.Start import start_states
 
 logging.basicConfig (level = logging.INFO)
 
-bot = Bot(token= config.TOKEN)
+bot = Bot(token = config.TOKEN)
 dp = Dispatcher(bot, storage = MemoryStorage())
 
 localized_manager = LocalizableManager()

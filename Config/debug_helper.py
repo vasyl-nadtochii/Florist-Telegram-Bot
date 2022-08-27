@@ -32,4 +32,4 @@ class Logger:
 
 def on_bot_started():
     time = datetime.now().strftime("%d.%m.%Y %H:%M:%S")
-    Logger.log(f"Bot started successfully at { time }", Logger.MessageType.debug)
+    Logger.log(f"Bot started successfully at { time }", Logger.MessageType.info)

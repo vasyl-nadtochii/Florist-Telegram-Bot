@@ -1,10 +1,13 @@
 from aiogram.types import ReplyKeyboardMarkup, ReplyKeyboardRemove, KeyboardButton
 from Florist.Services.Localizables.localizables import LocalizableManager
 
-class KeyboardMananger:
+class KeyboardManager:
 
     def __init__(self):
         self.localized_manager = LocalizableManager()
+
+    def remove_reply_keyboard(self):
+        return ReplyKeyboardRemove()
 
     def get_start_keyboard(self):
         sign_in_btn = KeyboardButton(self.localized_manager.get_localized_string("sign_in_btn_text"))
